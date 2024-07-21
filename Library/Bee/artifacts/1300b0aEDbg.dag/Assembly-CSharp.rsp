@@ -365,12 +365,14 @@
 "Assets/Scripts/Dreams/Dream.cs"
 "Assets/Scripts/Dreams/DreamBtn.cs"
 "Assets/Scripts/Dreams/DreamManager.cs"
+"Assets/Scripts/Dreams/PayDreamQuery.cs"
 "Assets/Scripts/ObligationBtnManager.cs"
 "Assets/Scripts/PlayerManager.cs"
 "Assets/Scripts/PlayerPosManager.cs"
 "Assets/Scripts/PlayerUIManager.cs"
 "Assets/Scripts/Scriptable/Card.cs"
 "Assets/Scripts/TokenManager.cs"
+"Assets/Scripts/WinManager.cs"
 -langversion:9.0
 
 /deterministic

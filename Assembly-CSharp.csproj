@@ -51,9 +51,11 @@
     <Compile Include="Assets\Scripts\ObligationBtnManager.cs" />
     <Compile Include="Assets\Scripts\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\Dreams\Dream.cs" />
+    <Compile Include="Assets\Scripts\WinManager.cs" />
     <Compile Include="Assets\Scripts\Scriptable\Card.cs" />
     <Compile Include="Assets\Scripts\TokenManager.cs" />
     <Compile Include="Assets\Scripts\BlueCardManager.cs" />
+    <Compile Include="Assets\Scripts\Dreams\PayDreamQuery.cs" />
     <Compile Include="Assets\Scripts\PlayerUIManager.cs" />
     <Compile Include="Assets\Scripts\CoinManager.cs" />
     <Compile Include="Assets\Scripts\CardManager.cs" />

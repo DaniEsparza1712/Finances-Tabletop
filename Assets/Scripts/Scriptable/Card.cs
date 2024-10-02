@@ -30,8 +30,7 @@ public class Card: ScriptableObject
     public string btn1Text = "OK";
     
     [Header("Option 2")]
-    [SerializeField]
-    private bool secondOption;
+    public bool secondOption;
     public string btn2Text = "Opción 2";
 
     public Option option2;

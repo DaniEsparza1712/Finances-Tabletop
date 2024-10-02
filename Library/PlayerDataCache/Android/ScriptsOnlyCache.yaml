@@ -7,10 +7,17 @@ ScriptsOnlyBuild:
     - Card
     - CardManager
     - CoinManager
+    - DefinitionBtn
+    - Dream
+    - DreamBtn
+    - DreamManager
+    - ObligationBtnManager
+    - PayDreamQuery
     - PlayerManager
     - PlayerPosManager
     - PlayerUIManager
     - TokenManager
+    - WinManager
     Cinemachine.dll:
     - Cinemachine.Cinemachine3rdPersonFollow
     - Cinemachine.CinemachineBrain
@@ -19,7 +26,6 @@ ScriptsOnlyBuild:
     - Cinemachine.CinemachineVirtualCamera
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.RiderScriptEditorData
-    - Packages.Rider.Editor.RiderScriptEditorPersistedState
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro:
     - TMPro.TMP_FontAsset
@@ -106,18 +112,51 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: BlueCardManager
     methodName: AddBills
   - assembly: Assembly-CSharp
     fullTypeName: PlayerManager
     methodName: ExecuteNextAction
+  - assembly: Assembly-CSharp
+    fullTypeName: DefinitionBtn
+    methodName: ChangeDefinition
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: DreamManager
+    methodName: StartGame
+  - assembly: Assembly-CSharp
+    fullTypeName: WinManager
+    methodName: Restart
   - assembly: Assembly-CSharp
     fullTypeName: TokenManager
     methodName: AddPasivos
@@ -142,6 +181,9 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: WinManager
+    methodName: Exit
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -154,6 +196,39 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: PlayerManager
     methodName: ExecuteNextAction
+  - assembly: UnityEngine.AnimationModule
+    fullTypeName: UnityEngine.Animator
+    methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: DefinitionBtn
+    methodName: ChangeDefinition
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: TokenManager
+    methodName: AddPasivos
+  - assembly: Assembly-CSharp
+    fullTypeName: CoinManager
+    methodName: AddBills
+  - assembly: Assembly-CSharp
+    fullTypeName: PlayerManager
+    methodName: UpdateCoinsUI
+  - assembly: Assembly-CSharp
+    fullTypeName: PlayerManager
+    methodName: UpdateTokensUI
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: PayDreamQuery
+    methodName: ClickConfirm
   - assembly: Assembly-CSharp
     fullTypeName: PlayerManager
     methodName: TurnActions
@@ -184,9 +259,33 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: PlayerManager
     methodName: ExecuteNextAction
+  - assembly: UnityEngine.AnimationModule
+    fullTypeName: UnityEngine.Animator
+    methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: DefinitionBtn
+    methodName: ChangeDefinition
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: ObligationBtnManager
+    methodName: ValidateClick
+  - assembly: UnityEngine.AnimationModule
+    fullTypeName: UnityEngine.Animator
+    methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: TokenManager
     methodName: AddPasivos
@@ -214,9 +313,33 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: PlayerManager
     methodName: ExecuteNextAction
+  - assembly: UnityEngine.AnimationModule
+    fullTypeName: UnityEngine.Animator
+    methodName: Play
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.AnimationModule
+    fullTypeName: UnityEngine.Animator
+    methodName: Play
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -239,78 +362,98 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16676}
+      Script: {instanceID: 16634}
     - Class: 114
-      Script: {instanceID: 16734}
+      Script: {instanceID: 16678}
     - Class: 114
-      Script: {instanceID: 17294}
+      Script: {instanceID: 16736}
     - Class: 114
-      Script: {instanceID: 17654}
+      Script: {instanceID: 16890}
     - Class: 114
-      Script: {instanceID: 17722}
+      Script: {instanceID: 17298}
     - Class: 114
-      Script: {instanceID: 17788}
+      Script: {instanceID: 17658}
     - Class: 114
-      Script: {instanceID: 17828}
+      Script: {instanceID: 17726}
     - Class: 114
-      Script: {instanceID: 17930}
+      Script: {instanceID: 17792}
     - Class: 114
-      Script: {instanceID: 17976}
+      Script: {instanceID: 17832}
     - Class: 114
-      Script: {instanceID: 18076}
+      Script: {instanceID: 17934}
     - Class: 114
-      Script: {instanceID: 18230}
+      Script: {instanceID: 17980}
     - Class: 114
-      Script: {instanceID: 18402}
+      Script: {instanceID: 18080}
     - Class: 114
-      Script: {instanceID: 18424}
+      Script: {instanceID: 18404}
     - Class: 114
-      Script: {instanceID: 18778}
+      Script: {instanceID: 18426}
     - Class: 114
-      Script: {instanceID: 19018}
+      Script: {instanceID: 18434}
     - Class: 114
-      Script: {instanceID: 19042}
+      Script: {instanceID: 18782}
     - Class: 114
-      Script: {instanceID: 19264}
+      Script: {instanceID: 18806}
     - Class: 114
-      Script: {instanceID: 19528}
+      Script: {instanceID: 19024}
     - Class: 114
-      Script: {instanceID: 20064}
+      Script: {instanceID: 19048}
     - Class: 114
-      Script: {instanceID: 20198}
+      Script: {instanceID: 19164}
     - Class: 114
-      Script: {instanceID: 20260}
+      Script: {instanceID: 19272}
     - Class: 114
-      Script: {instanceID: 20630}
+      Script: {instanceID: 19298}
     - Class: 114
-      Script: {instanceID: 20796}
+      Script: {instanceID: 19538}
     - Class: 114
-      Script: {instanceID: 20826}
+      Script: {instanceID: 20074}
     - Class: 114
-      Script: {instanceID: 20998}
+      Script: {instanceID: 20208}
     - Class: 114
-      Script: {instanceID: 21318}
+      Script: {instanceID: 20270}
     - Class: 114
-      Script: {instanceID: 21326}
+      Script: {instanceID: 20640}
     - Class: 114
-      Script: {instanceID: 21738}
+      Script: {instanceID: 20806}
     - Class: 114
-      Script: {instanceID: 22376}
+      Script: {instanceID: 20828}
     - Class: 114
-      Script: {instanceID: 22978}
+      Script: {instanceID: 20838}
     - Class: 114
-      Script: {instanceID: 23026}
+      Script: {instanceID: 21010}
     - Class: 114
-      Script: {instanceID: 23100}
+      Script: {instanceID: 21330}
+    - Class: 114
+      Script: {instanceID: 21338}
+    - Class: 114
+      Script: {instanceID: 21750}
+    - Class: 114
+      Script: {instanceID: 22388}
+    - Class: 114
+      Script: {instanceID: 22584}
+    - Class: 114
+      Script: {instanceID: 22992}
+    - Class: 114
+      Script: {instanceID: 23040}
+    - Class: 114
+      Script: {instanceID: 23114}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -328,6 +471,12 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 915204dac8acad99f076d6e72ada0a0f
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: Button
   - hash:
       serializedVersion: 2
       Hash: 55060a7bf226ac385ce19ebd450f199f
@@ -394,6 +543,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: 989d3d0a86a07c49ad53c944ee72cbbe
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: DefinitionBtn
   - hash:
       serializedVersion: 2
       Hash: f778e23b6ff26b8de4721be0eb1fa240
@@ -624,12 +779,6 @@ ScriptsOnlyBuild:
     className: CinemachineMixingCamera
   - hash:
       serializedVersion: 2
-      Hash: 915204dac8acad99f076d6e72ada0a0f
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UI
-    className: Button
-  - hash:
-      serializedVersion: 2
       Hash: d90629714fa6b0145fcaffc87f5c6559
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -678,10 +827,16 @@ ScriptsOnlyBuild:
     className: VariablesAsset
   - hash:
       serializedVersion: 2
-      Hash: e9db3bfdb9b6c2aee5564b4211e075da
+      Hash: ca4506ded45bbf628555b6182728b091
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerManager
+  - hash:
+      serializedVersion: 2
+      Hash: ecec3c23782e17c65f9f38c326837870
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Dream
   - hash:
       serializedVersion: 2
       Hash: 07ac5abbf1211711231ba9fc21c550e6
@@ -750,6 +905,12 @@ ScriptsOnlyBuild:
     className: Box
   - hash:
       serializedVersion: 2
+      Hash: 77c2e74b9ee58d94b14e3883529005ce
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: DreamManager
+  - hash:
+      serializedVersion: 2
       Hash: 0a3f328f3ea906bbbcf794f4c27ee59d
     assemblyName: Unity.VisualScripting.Flow
     namespaceName: Unity.VisualScripting
@@ -810,6 +971,12 @@ ScriptsOnlyBuild:
     className: SignalReceiver
   - hash:
       serializedVersion: 2
+      Hash: 14e5e5d20d522312317c95a05e9c21d4
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: DreamBtn
+  - hash:
+      serializedVersion: 2
       Hash: c78ed13f6b5a632d70d4f73f56ad81f2
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -856,6 +1023,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnJointBreak2DMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 474579ef32f171fd72759fc4f038cd60
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PayDreamQuery
   - hash:
       serializedVersion: 2
       Hash: 70373e18181a2229c9ec8448873d7545
@@ -1114,6 +1287,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine
     namespaceName: Cinemachine
     className: CinemachineBrain
+  - hash:
+      serializedVersion: 2
+      Hash: caadc443117a630087a69238b9973ac5
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ObligationBtnManager
   - hash:
       serializedVersion: 2
       Hash: 540882762544409cc4530e60db00e951
@@ -1398,6 +1577,12 @@ ScriptsOnlyBuild:
     className: CinemachineStateDrivenCamera
   - hash:
       serializedVersion: 2
+      Hash: a3a33d1a8be72eb729ba88c93fcea821
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: WinManager
+  - hash:
+      serializedVersion: 2
       Hash: 9a174471d4db2c0c6d3ac47d2f818db1
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1446,7 +1631,7 @@ ScriptsOnlyBuild:
     className: CinemachineBasicMultiChannelPerlin
   - hash:
       serializedVersion: 2
-      Hash: 7d339f0a3ea4e20129b215aed1f011e7
+      Hash: b63caf25becaa4cb0e42632add2c814f
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerPosManager
@@ -1507,4 +1692,5 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/cdani/Documents/UnityProjects/Tabletop Cashflow/Cashflow.apk
+  playerPath: C:/Users/Dan Esparza/Documents/UnityProjects/Finances-Tabletop/Builds/Flujo
+    del Dinero y la Felicidad.apk

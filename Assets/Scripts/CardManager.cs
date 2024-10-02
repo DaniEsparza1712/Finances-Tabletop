@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -123,41 +124,36 @@ public class CardManager : MonoBehaviour
     private void FillOutSummary2(int index)
     {
         ClearChildren(content2);
-        var appear = false;
+        var appear = cards[index].secondOption;
         if (Mathf.Abs(cards[index].option2.bills) > 0)
         {
             var billExpenses = Instantiate(expenseInfoPrefab, content2);
             billExpenses.transform.GetChild(0).GetComponent<Image>().sprite = billSprite;
             billExpenses.transform.GetChild(1).GetComponent<TMP_Text>().text = cards[index].option2.bills.ToString();
-            appear = true;
         }
         if (Mathf.Abs(cards[index].option2.feliciCoins) > 0)
         {
             var feliciExpenses = Instantiate(expenseInfoPrefab, content2);
             feliciExpenses.transform.GetChild(0).GetComponent<Image>().sprite = feliciCoinSprite;
             feliciExpenses.transform.GetChild(1).GetComponent<TMP_Text>().text = cards[index].option2.feliciCoins.ToString();
-            appear = true;
         }
         if (Mathf.Abs(cards[index].option2.shareCoins) > 0)
         {
             var shareExpenses = Instantiate(expenseInfoPrefab, content2);
             shareExpenses.transform.GetChild(0).GetComponent<Image>().sprite = shareCoinSprite;
             shareExpenses.transform.GetChild(1).GetComponent<TMP_Text>().text = cards[index].option2.shareCoins.ToString();
-            appear = true;
         }
         if (Mathf.Abs(cards[index].option2.pasivos) > 0)
         {
             var passiveExpenses = Instantiate(expenseInfoPrefab, content2);
             passiveExpenses.transform.GetChild(0).GetComponent<Image>().sprite = passiveSprite;
             passiveExpenses.transform.GetChild(1).GetComponent<TMP_Text>().text = cards[index].option2.pasivos.ToString();
-            appear = true;
         }
         if (Mathf.Abs(cards[index].option2.activos) > 0)
         {
             var activeExpenses = Instantiate(expenseInfoPrefab, content2);
             activeExpenses.transform.GetChild(0).GetComponent<Image>().sprite = activeSprite;
             activeExpenses.transform.GetChild(1).GetComponent<TMP_Text>().text = cards[index].option2.activos.ToString();
-            appear = true;
         }
         rectTransform2.gameObject.SetActive(appear);
         btn2.gameObject.SetActive(appear);
@@ -184,9 +180,8 @@ public class CardManager : MonoBehaviour
                 failedClick.Invoke();
         }
     }
-
-    private void OnEnable()
-    {
+    
+    public void ChangeCard(){
         var randNum = Random.Range(0, cards.Count);
         FillOutCard(randNum);
         FillOutSummary1(randNum);

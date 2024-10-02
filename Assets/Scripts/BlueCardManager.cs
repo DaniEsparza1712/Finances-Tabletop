@@ -46,7 +46,7 @@ public class BlueCardManager : MonoBehaviour
     public void AddBills()
     {
         coinManager.AddBills(GetBillsToAdd());
-        playerUIManager.billsText.text = $"${coinManager.GetBills}";
+        playerUIManager.billsText.text = $"${coinManager.GetBills:D4}";
     }
     
     private void FillSummary()

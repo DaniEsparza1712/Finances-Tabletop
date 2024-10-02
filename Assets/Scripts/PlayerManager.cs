@@ -18,6 +18,10 @@ public class PlayerManager : MonoBehaviour
     private List<Activities> turnActivities = new List<Activities>();
     public Transform lookAt;
 
+    public CardManager redManager;
+    public CardManager greenManager;
+    public CardManager yellowManager;
+
     public enum Activities
     {
         DrawRedCard,
@@ -188,12 +192,15 @@ public class PlayerManager : MonoBehaviour
                 break;
             case Activities.DrawGreenCard:
                 _uiManager.ChangeGreenActive(true);
+                greenManager.ChangeCard();
                 break;
             case Activities.DrawRedCard:
                 _uiManager.ChangeRedActive(true);
+                redManager.ChangeCard();
                 break;
             case Activities.DrawYellowCard:
                 _uiManager.ChangeYellowActive(true);
+                yellowManager.ChangeCard();
                 break;
             case Activities.DiceThrow:
                 _uiManager.ChangeDiceActive(true);

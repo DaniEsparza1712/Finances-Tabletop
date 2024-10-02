@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,7 @@ public class PlayerPosManager : MonoBehaviour
     [Header("Events")]
     public UnityEvent onChangeToStatic;
     public UnityEvent onChangeToMoving;
+    public float speed = 0.1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,8 +33,7 @@ public class PlayerPosManager : MonoBehaviour
     {
         if (_posState == PosState.Moving && _wayPoints.Count > 0)
         {
-            _playerTransform.position = Vector3.MoveTowards(_playerTransform.position, _wayPoints[0].position, 0.1f);
-            if (Vector3.Distance(_playerTransform.position, _wayPoints[0].position) < 0 + Mathf.Epsilon)
+            if (Vector3.Distance(_playerTransform.position, _wayPoints[0].position) < 0 + 0.2f)
             {
                 _wayPoints.Remove(_wayPoints[0]);
             }
@@ -40,6 +41,15 @@ public class PlayerPosManager : MonoBehaviour
         if (_wayPoints.Count == 0 && _posState != PosState.Static)
         {
             ChangePosState(PosState.Static);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (_posState == PosState.Moving && _wayPoints.Count > 0)
+        {
+            var dir = (_wayPoints[0].position - _playerTransform.position).normalized;
+            _playerTransform.position += dir * speed;
         }
     }
 
